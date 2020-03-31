@@ -1,0 +1,41 @@
+Exemplo de arquivo de entrada - Lab Livro.
+bla bla bla
+ble
+-------------------------------------------------------
+INSERIR thebriefing SEGUINTE_A briefing
+TRANSFERIR thebriefin SEGUINTE_A briefing
+INSERIR brefing SUB briefing
+TRANSFERIR briefing SEGUINTE_A briefings
+REMOVER briefings
+LISTA
+TITULO     esporte
+TITULO     o_caso_mais_loko
+REMOVER esporte
+LISTA
+INSERIR errado SUB o_caso_mais_loko
+INSERIR avell SEGUINTE_A o_caso_mais_loko
+LISTA
+INSERIR brucin SUB errado
+INSERIR babbalia SUB errado
+INSERIR Lolzin SUB babbalia
+INSERIR lollzin2 SEGUINTE_A Lolzin
+INSERIR TheUltimateLoL SEGUINTE_A lollzin2
+LISTA
+INSERIR filhinho SUB lollzin2
+INSERIR filhao SUB Lolzin
+INSERIR cabacos SUB TheUltimateLoL
+LISTA
+INSERIR genialidade SUB brucin
+INSERIR lindeza SEGUINTE_A genialidade
+LISTA
+TRANSFERIR babbalia SUB brucin
+TRANSFERIR babbalia SEGUINTE_A brucin
+TRANSFERIR lollzin2 SUB errado
+LISTA
+TRANSFERIR Lolzin SUB TheUltimateLoL
+TRANSFERIR cabacos SUB o_caso_mais_loko
+LISTA
+REMOVER babbalia
+REMOVER o_caso_mais_loko
+LISTA
+FIM

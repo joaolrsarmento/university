@@ -1,0 +1,140 @@
+INSTITULO TECNOLÓGICO DE AERONAUTICA
+JOAO SARMENTO
+TURMA 3
+--------------------------------------------------
+ERRO: Nao encontrado joaoluis
+--------------------------------------------------
+ERRO: Nao encontrado lucasramos
+--------------------------------------------------
+ERRO: Nao encontrado lucaspires
+--------------------------------------------------
+LISTA 1
+
+--------------------------------------------------
+LISTA 2
+
+      iNeed
+1.      atletismo
+1.1.      natacao
+1.1.1.      coletivo
+1.1.1.1.      basquete
+1.1.1.2.      chupabixaral
+1.1.2.      chupsabixaral
+--------------------------------------------------
+LISTA 3
+
+      iNeed
+1.      atletismo
+1.1.      natacao
+1.1.1.      coletivo
+1.1.1.1.      basquete
+1.1.1.1.1.      futebol
+1.1.1.2.      chupabixaral
+1.1.2.      chupsabixaral
+1.2.      luta
+2.      volei
+2.1.      batata
+3.      argola
+3.1.      atletismoo
+3.1.1.      natacaoo
+3.1.1.1.      coletivoo
+3.1.1.1.1.      atletismooo
+3.2.      mamablz
+3.3.      jiu-jitsu
+3.4.      karate
+--------------------------------------------------
+ERRO: Nao eh possivel transferir coletivooooo SEGUINTE_A raiz(iNeed)
+--------------------------------------------------
+ERRO: nao encontrado item coletivooooooooo
+--------------------------------------------------
+LISTA 4
+
+      iNeed
+1.      coletivooooooooooo
+2.      natacaooooooooo
+3.      atletismooooooooo
+4.      coletivooooooooo
+5.      natacaooooooo
+6.      atletismoooooo
+7.      coletivooooo
+8.      atletismo
+8.1.      natacao
+8.1.1.      coletivo
+8.1.1.1.      basquete
+8.1.1.1.1.      futebol
+8.1.1.2.      chupabixaral
+8.1.2.      chupsabixaral
+8.2.      luta
+9.      volei
+9.1.      batata
+10.      argola
+10.1.      atletismoo
+10.1.1.      natacaoo
+10.1.1.1.      coletivoo
+10.1.1.1.1.      atletismooo
+10.1.1.1.1.1.      natacaooo
+10.1.1.1.1.1.1.      coletivooo
+10.1.1.1.1.1.1.1.      atletismoooo
+10.1.1.1.1.1.1.1.1.      natacaooooo
+10.2.      mamablz
+10.3.      jiu-jitsu
+10.4.      karate
+--------------------------------------------------
+ERRO: nao encontrado item badminton
+--------------------------------------------------
+LISTA 5
+
+      iNeed
+1.      coletivooooooooooo
+2.      natacaooooooooo
+3.      atletismooooooooo
+4.      coletivooooooooo
+5.      natacaooooooo
+6.      atletismoooooo
+7.      coletivooooo
+8.      atletismo
+8.1.      maratona
+8.2.      100_m_rasos
+8.3.      salto_triplo
+8.4.      natacao
+8.4.1.      coletivo
+8.4.1.1.      basquete
+8.4.1.1.1.      futebol
+8.4.1.2.      chupabixaral
+8.4.2.      chupsabixaral
+9.      argola
+9.1.      atletismoo
+9.1.1.      natacaoo
+9.1.1.1.      coletivoo
+9.1.1.1.1.      atletismooo
+9.1.1.1.1.1.      natacaooo
+9.1.1.1.1.1.1.      coletivooo
+9.1.1.1.1.1.1.1.      atletismoooo
+9.1.1.1.1.1.1.1.1.      natacaooooo
+9.2.      mamablz
+9.3.      jiu-jitsu
+9.4.      karate
+--------------------------------------------------
+LISTA 6
+
+      iNeed
+1.      coletivooooooooooo
+2.      natacaooooooooo
+3.      atletismooooooooo
+4.      coletivooooooooo
+5.      natacaooooooo
+6.      atletismoooooo
+7.      coletivooooo
+8.      argola
+8.1.      atletismoo
+8.1.1.      natacaoo
+8.1.1.1.      coletivoo
+8.1.1.1.1.      atletismooo
+8.1.1.1.1.1.      natacaooo
+8.1.1.1.1.1.1.      coletivooo
+8.1.1.1.1.1.1.1.      atletismoooo
+8.1.1.1.1.1.1.1.1.      natacaooooo
+8.2.      mamablz
+8.3.      jiu-jitsu
+8.4.      karate
+--------------------------------------------------

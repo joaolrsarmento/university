@@ -1,0 +1,21 @@
+Raissa Pimentel
+Teste 7 Simples - Remover último
+CES-11 2019
+==================================================
+Quantidade maxima de correntistas
+40
+
+INICIO
+ABRE_CONTA            Thiago Cardoso
+ABRE_CONTA            Bruno Macedo
+ABRE_CONTA            Ulisses
+ABRE_CONTA            Emanuel Batista
+ABRE_CONTA            Carolina
+DEPOSITO      500.00  Carolina
+DEPOSITO      200.00  Bruno Macedo
+EXTRATO		      Ulisses
+SAQUE          90.00  Carolina
+SAQUE         500.00  Bruno Macedo
+EXTRATO		      Bruno Macedo
+FECHA_CONTA	      Ulisses
+FIM

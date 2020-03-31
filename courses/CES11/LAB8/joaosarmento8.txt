@@ -1,0 +1,28 @@
+INSTITUTO TECNOLOGICO DE AERONAUTICA
+JOAO SARMENTO - T3
+ARMANDO GOUVEIA
+VEM FERIAS
+
+------------------------------------------------------------
+
+UMA ORDENACAO TOPOLOGICA:
+
+A B C I E F J L G H M K N D
+
+
+CAMINHO CRITICO:
+
+TAREFA        DESCRICAO           DURACAO
+
+  A   Escavacao                       2
+  B   Fundacao                        4
+  C   Paredes                        10
+  E   Encanamento exterior            4
+  F   Encanamento interior            5
+  J   Divisorias                      8
+  L   Pintura interior                5
+  G   Muros                           7
+  H   Pintura exterior                9
+  M   Acabamento exterior             2
+                                   ----
+TEMPO MINIMO PARA O PROJETO:         56 semanas

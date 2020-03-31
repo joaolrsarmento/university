@@ -1,0 +1,22 @@
+INSTITUTO TECNOLOGICO DE AERONAUTICA
+JOAO LUIS ROCHA SARMENTO
+T3 - ARMANDO GOUVEIA
+
+RESULTADOS DAS CONSULTAS
+
+Saldo     0.00  Ulisses
+Saldo  -300.00  Bruno Macedo
+
+RELATORIO FINAL
+
+Tamanho maximo da lista:    40
+Total de correntistas:       4
+Posicoes ocupadas: inicio:  37
+                      fim:   0
+
+CORRENTISTAS ATUAIS
+
+ -300.00 37 Bruno Macedo
+  410.00 38 Carolina
+    0.00 39 Emanuel Batista
+    0.00 0 Thiago Cardoso

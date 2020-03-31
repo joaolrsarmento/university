@@ -1,0 +1,23 @@
+JOAO SARMENTO
+T23-3
+AS FERIAS CHEGARAM
+
+---------------------------------------
+Ordem de selecao pelo algoritmo
+---------------------------------------
+COCTA      IFI          3
+IFI        ITA          5
+ITA        H8           1
+H8         INPE         4
+INPE       DS           2
+
+Custo total: 15
+
+---------------------------------------
+Ordem crescente de custos
+---------------------------------------
+ITA        H8           1
+INPE       DS           2
+COCTA      IFI          3
+H8         INPE         4
+IFI        ITA          5

@@ -1,0 +1,59 @@
+Exemplo de arquivo de entrada - Lab Livro.
+bla bla bla
+ble
+-------------------------------------------------------
+INSERIR    lucapires    SUB      joaoluis
+TRANSFERIR lucasramos   SEGUINTE_A  joaofuckingluis
+REMOVER    lucaspires
+LISTA
+TITULO     iNeed
+INSERIR    atletismo    SUB          iNeed
+INSERIR    natacao      SUB          atletismo
+INSERIR    coletivo     SUB          natacao
+INSERIR    chupabixaral SUB coletivo
+INSERIR    chupsabixaral SEGUINTE_A coletivo
+TRANSFERIR  chupabixaral SUB coletivo
+TRANSFERIR  chupsabixaral SEGUINTE_A coletivo
+INSERIR    basquete     SUB          coletivo
+LISTA
+INSERIR    futebol      SUB         basquete
+INSERIR    volei        SEGUINTE_A   futebol
+INSERIR    luta         SEGUINTE_A   natacao 
+INSERIR    argola       SUB          futebol
+INSERIR    jiu-jitsu    SUB          argola
+INSERIR    karate       SEGUINTE_A   jiu-jitsu
+TRANSFERIR volei      SEGUINTE_A atletismo
+TRANSFERIR  argola SEGUINTE_A volei
+INSERIR   batata SUB volei
+INSERIR  mamablz  SUB argola
+INSERIR    atletismoo   SUB          argola
+INSERIR    natacaoo    SUB          atletismoo
+INSERIR    coletivoo   SUB          natacaoo
+INSERIR    atletismooo    SUB         coletivoo
+LISTA
+INSERIR    natacaooo      SUB          atletismooo
+TRANSFERIR karate  SEGUINTE_A  jiu-jitsu
+INSERIR    coletivooo     SUB          natacaooo
+INSERIR    atletismoooo   SUB          coletivooo
+INSERIR    natacaooooo      SUB          atletismoooo
+INSERIR    coletivooooo     SUB          iNeed
+INSERIR    atletismoooooo    SUB          iNeed
+TRANSFERIR coletivooooo  SEGUINTE_A  iNeed
+TRANSFERIR coletivooooooooo  SEGUINTE_A  atletismoooo
+INSERIR    natacaooooooo      SUB          iNeed
+INSERIR    coletivooooooooo     SUB          iNeed
+INSERIR    atletismooooooooo    SUB          iNeed
+INSERIR    natacaooooooooo      SUB          iNeed
+INSERIR    coletivooooooooooo     SUB          iNeed
+LISTA
+INSERIR    maratona       SUB          atletismo
+INSERIR    100_m_rasos    SEGUINTE_A   maratona
+INSERIR    salto_triplo   SEGUINTE_A   100_m_rasos
+REMOVER    volei
+REMOVER    luta
+REMOVER    badminton
+LISTA
+INSERIR    individual   SEGUINTE_A   coletivo
+TRANSFERIR atletismo    SUB          individual
+LISTA
+FIM

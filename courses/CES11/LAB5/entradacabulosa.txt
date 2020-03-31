@@ -1,0 +1,24 @@
+Exemplo de arquivo de entrada - Lab Livro.
+bla bla bla
+ble
+-------------------------------------------------------
+TITULO Luquita
+INSERIR johnlewis SUB Luquita
+INSERIR cabuloso SUB johnlewis
+INSERIR insano SUB cabuloso
+INSERIR eosguri SUB insano
+INSERIR azar SUB eosguri
+INSERIR semfreio SUB azar
+INSERIR tn SUB semfreio
+LISTA
+INSERIR ita SUB tn
+INSERIR euamoita SUB ita
+LISTA
+INSERIR xupa SUB euamoita
+INSERIR hehehe SUB xupa
+INSERIR bruce SUB hehehe
+INSERIR armando SUB bruce
+INSERIR armandocabuloso SUB armando
+INSERIR pinto SEGUINTE_A johnlewis
+LISTA
+FIM

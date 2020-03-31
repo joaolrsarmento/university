@@ -1,0 +1,38 @@
+INSTITUTO TECNOLOGICO DE AERONAUTICA
+JOAO SARMENTO - T3
+ARMANDO GOUVEIA
+VEM FERIAS
+
+--------------------------------------------------
+RESPOSTAS DAS CONSULTAS
+--------------------------------------------------
+40       Estudar matematica
+AVISO    Nao ha tarefas na agenda  :-)
+ 1       Desistir da vida
+AVISO    Nao ha tarefas na agenda  :-)
+AVISO    Nao ha tarefas na agenda  :-)
+AVISO    Nao ha tarefas na agenda  :-)
+AVISO    Nao ha tarefas na agenda  :-)
+60       Fazer lab de ces-11
+75       Responder e-mails
+ERRO     Agenda cheia. Impossivel inserir.
+58       Alterar o briefing
+ERRO     Agenda cheia. Impossivel inserir.
+ERRO     Agenda cheia. Impossivel inserir.
+ERRO     Agenda cheia. Impossivel inserir.
+57       Criar o briefing
+56       Desistir do Briefing
+55       Passar o briefing
+98       Comprar guarda-chuva
+54       Pegar o briefing
+53       Roubar o banco 
+52       Ir ao banco pagar conta
+50       Relatorio de quimica
+12       Escovar os dentes
+ 8       Pentear o cabelo
+ 5       Limpar apartamento
+
+--------------------------------------------------
+FICA PARA O DIA SEGUINTE
+--------------------------------------------------
+Agenda vazia! Nao restam tarefas para o dia seguinte.
