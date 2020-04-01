@@ -58,4 +58,5 @@ def simulated_annealing(cost_function, random_neighbor, schedule, theta0, epsilo
         if changed:
             # Stores this theta
             history.append(theta)
+        changed = False
     return theta, history
