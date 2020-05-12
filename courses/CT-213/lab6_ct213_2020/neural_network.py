@@ -8,6 +8,7 @@ class NeuralNetwork:
     Represents a two-layers Neural Network (NN) for multi-class classification.
     The sigmoid activation function is used for all neurons.
     """
+
     def __init__(self, num_inputs, num_hiddens, num_outputs, alpha):
         """
         Constructs a two-layers Neural Network.
@@ -27,8 +28,10 @@ class NeuralNetwork:
         self.alpha = alpha
         self.weights = [None] * 3
         self.biases = [None] * 3
-        self.weights[1] = 0.001 * np.matrix(np.random.randn(num_hiddens, num_inputs))
-        self.weights[2] = 0.001 * np.matrix(np.random.randn(num_outputs, num_hiddens))
+        self.weights[1] = 0.001 * \
+            np.matrix(np.random.randn(num_hiddens, num_inputs))
+        self.weights[2] = 0.001 * \
+            np.matrix(np.random.randn(num_outputs, num_hiddens))
         self.biases[1] = np.zeros((num_hiddens, 1))
         self.biases[2] = np.zeros((num_outputs, 1))
 
@@ -48,8 +51,9 @@ class NeuralNetwork:
         a = [None] * 3
         z[0] = input
         a[0] = input
-        # Add logic for neural network inference
-        a[2] = 0.001 * np.ones((self.num_outputs, 1))  # Change this line
+        for i in range(1, len(z)):
+            z[i] = np.dot(self.weights[i], a[i-1]) + self.biases[i]
+            a[i] = sigmoid(z[i])
         return z, a
 
     def compute_cost(self, inputs, expected_outputs):
@@ -73,7 +77,8 @@ class NeuralNetwork:
         yhat = outputs
         for i in range(num_cases):
             for c in range(self.num_outputs):
-                cost += -(y[i][c] * log(yhat[i][c]) + (1.0 - y[i][c]) * log(1.0 - yhat[i][c]))
+                cost += -(y[i][c] * log(yhat[i][c]) +
+                          (1.0 - y[i][c]) * log(1.0 - yhat[i][c]))
         cost /= num_cases
         return cost
 
@@ -96,7 +101,29 @@ class NeuralNetwork:
         weights_gradient[2] = np.zeros((self.num_outputs, self.num_hiddens))
         biases_gradient[1] = np.zeros((self.num_hiddens, 1))
         biases_gradient[2] = np.zeros((self.num_outputs, 1))
-        # Add logic to compute the gradients
+
+
+        num_cases = len(inputs)
+        outputs = [None] * num_cases
+
+        for i in range(num_cases):
+            z, a = self.forward_propagation(inputs[i])
+            outputs[i] = a[-1]
+            delta1 = np.zeros((self.num_hiddens, 1))
+            delta2 = np.zeros((self.num_outputs, 1))
+
+            delta2 = outputs[i] - expected_outputs[i]
+            biases_gradient[2] += delta2/num_cases
+
+            for c in range(self.num_outputs):
+                delta1 = delta1 + np.multiply(np.dot(self.weights[2][c].T,
+                    delta2[c]), sigmoid_derivative(z[1]))
+
+            biases_gradient[1] += delta1/num_cases
+
+            weights_gradient[2] += np.dot(delta2, a[1].T)/num_cases
+            weights_gradient[1] += np.dot(delta1, a[0].T)/num_cases
+
         return weights_gradient, biases_gradient
 
     def back_propagation(self, inputs, expected_outputs):
@@ -108,6 +135,9 @@ class NeuralNetwork:
         :param expected_outputs: expected outputs of the network.
         :type expected_outputs: list of numpy matrices.
         """
-        weights_gradient, biases_gradient = self.compute_gradient_back_propagation(inputs, expected_outputs)
-        # Add logic to update the weights and biases
-        pass  # Remove this line
+        weights_gradient, biases_gradient = self.compute_gradient_back_propagation(
+            inputs, expected_outputs)
+
+        for i in range(1, len(self.weights)):
+            self.weights[i] = self.weights[i] - self.alpha * weights_gradient[i]
+            self.biases[i] = self.biases[i] - self.alpha * biases_gradient[i]
