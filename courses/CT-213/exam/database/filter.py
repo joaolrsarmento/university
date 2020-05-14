@@ -6,8 +6,7 @@ from nltk.corpus import stopwords
 
 class TweetFilter:
     def __init__(self):
-        self._stopwords = set(stopwords.words(
-            'english') + list(punctuation) + ['AT_USER', 'URL'])
+        pass
 
     def processTweets(self, tweetsList):
         processedTweets = []
@@ -17,14 +16,13 @@ class TweetFilter:
         return processedTweets
 
     def __processTweet(self, tweet):
-        tweet = tweet.lower()  # convert text to lower-case
+        tweet = tweet.lower()
         tweet = re.sub('((www\.[^\s]+)|(https?://[^\s]+))',
-                       'URL', tweet)  # remove URLs
-        tweet = re.sub('@[^\s]+', 'AT_USER', tweet)  # remove usernames
-        tweet = re.sub(r'#([^\s]+)', r'\1', tweet)  # remove the # in #hashtag
-        # remove repeated characters (helloooooooo into hello)
+                       'URL', tweet) 
+        tweet = re.sub('@[^\s]+', 'AT_USER', tweet)  
+        tweet = re.sub(r'#([^\s]+)', r'\1', tweet)  
         tweet = word_tokenize(tweet)
-        return [word for word in tweet if word not in self._stopwords]
+        return tweet
 
 
 filter = TweetFilter()
