@@ -52,6 +52,7 @@ class NeuralNetwork:
         z[0] = input
         a[0] = input
         for i in range(1, len(z)):
+            # Propagate using the previous layer
             z[i] = np.dot(self.weights[i], a[i-1]) + self.biases[i]
             a[i] = sigmoid(z[i])
         return z, a
@@ -112,15 +113,17 @@ class NeuralNetwork:
             delta1 = np.zeros((self.num_hiddens, 1))
             delta2 = np.zeros((self.num_outputs, 1))
 
+            # Get error from the last layer
             delta2 = outputs[i] - expected_outputs[i]
+            # Update biases gradient based on mean
             biases_gradient[2] += delta2/num_cases
-
+            # Get error from the hidden layer
             for c in range(self.num_outputs):
                 delta1 = delta1 + np.multiply(np.dot(self.weights[2][c].T,
                     delta2[c]), sigmoid_derivative(z[1]))
-
+            # Update biases gradient based on mean
             biases_gradient[1] += delta1/num_cases
-
+            # Update weights gradient based on mean
             weights_gradient[2] += np.dot(delta2, a[1].T)/num_cases
             weights_gradient[1] += np.dot(delta1, a[0].T)/num_cases
 
@@ -138,6 +141,7 @@ class NeuralNetwork:
         weights_gradient, biases_gradient = self.compute_gradient_back_propagation(
             inputs, expected_outputs)
 
+        # Gradient descent with learning rate of alpha
         for i in range(1, len(self.weights)):
             self.weights[i] = self.weights[i] - self.alpha * weights_gradient[i]
             self.biases[i] = self.biases[i] - self.alpha * biases_gradient[i]
