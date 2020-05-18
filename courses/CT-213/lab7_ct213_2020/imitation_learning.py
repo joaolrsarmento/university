@@ -27,7 +27,8 @@ joints_dict['rightKneePitch'] = 17
 joints_dict['rightShoulderPitch'] = 18
 joints_dict['rightShoulderRoll'] = 19
 
-right_leg_joints = ['rightHipRoll', 'rightHipPitch', 'rightKneePitch', 'rightAnklePitch', 'rightAnkleRoll']
+right_leg_joints = ['rightHipRoll', 'rightHipPitch',
+                    'rightKneePitch', 'rightAnklePitch', 'rightAnkleRoll']
 
 num_epochs = 30000  # number of epochs for training
 # Figure format used for saving figures
@@ -39,17 +40,29 @@ fig_format = 'png'
 positions = np.loadtxt('positions.txt')
 # The dataset contains the walking cycles, but we will use only the first one for training
 expected_output = positions[0:40, :]
+
 # Creating a input vector (0.008 ms is the sample time of the walking algorithm)
 input = np.matrix(0.008 * np.arange(0, expected_output.shape[0])).T
 
 # Setting the random seed of numpy's random library for reproducibility reasons
 np.random.seed(0)
 
-# Todo: Implement and train the neural network using Keras
+model = models.Sequential()
+model.add(layers.Dense(75, activation=activations.linear, input_shape=(1,)))
+model.add(layers.LeakyReLU(0.01))
+model.add(layers.Dense(50, activation=activations.linear))
+model.add(layers.LeakyReLU(0.01))
+model.add(layers.Dense(20, activation=activations.linear))
+
+model.compile(optimizer=optimizers.Adam(), loss=losses.mean_squared_error)
+
+history = model.fit(input, expected_output,
+                    batch_size=len(expected_output), epochs=num_epochs)
 
 input_predict = np.matrix(np.arange(0, input[-1] + 0.001, 0.001)).T
-# output = model.predict(input_predict)  # add this line to predict the output from the Neural Network
-output = np.zeros((len(input_predict), np.size(expected_output, 1)))  # remove this line
+
+# add this line to predict the output from the Neural Network
+output = model.predict(input_predict)
 
 # Comparing original and copied joint trajectories to evaluate the imitation learning
 for joint in right_leg_joints:
