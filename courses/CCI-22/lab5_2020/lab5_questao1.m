@@ -1,5 +1,5 @@
 format long
-f=@(x) 5 ./ (4 + 2 * x.^2); % Creating f function
+f=@(x) 4 ./ (5 + 2 * x.^2); % Creating f function
 initial_degree = 2; final_degree = 10; % P degree range
 a = -3; b = 3; % Interpolation range
 for n=initial_degree:final_degree

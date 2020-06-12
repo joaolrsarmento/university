@@ -3,7 +3,7 @@ f=@(x) 1 ./ (1 + 7 * x.^2); % Function definition
 X = [0 0.4 0.65 1.31 1.48 1.62 2.45]; Y = [1 0.471698 0.252685 0.076848 0.0612265 0.051624 0.0232463]; 
 XX = [0.22 0.47 1.09 1.36 1.92]; % Values the program wanna calculate
 for i = 1:length(XX) % Calculates the value for each value in XX
-    xx = XX(i); value = SplineCubicaN(X, Y, xx); erro = abs(value - f(xx))/ abs(f(xx));
+    xx = XX(i); value = SplineCubicaN(X, Y, xx); erro = abs(value - f(xx))/ abs(value);
     fprintf('f(%.2f) = %.5f\nS3(%.2f) = %.5f\nErro relativo = %.5f\n', xx, f(xx), xx, value, erro); 
 end
 function[val]=SplineCubicaN(x,y,xx)
