@@ -34,9 +34,9 @@ def epsilon_greedy_action(q, state, epsilon):
     action = -1
 
     if p < epsilon:
-        action = random.randint(0, q.shape[1] - 1)
+        action = random.randint(0, q.shape[1] - 1) # escolhe acao aleatoria com probabilidade e
     else:
-        action = greedy_action(q, state)
+        action = greedy_action(q, state) # escolhe acao máxima com probabilidade 1 - e
 
     return action
 
