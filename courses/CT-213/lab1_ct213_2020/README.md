@@ -1,3 +1,3 @@
 # This is wrong
 
-# The spiral implementation is fucked up
+# The spiral implementation is wrong up
